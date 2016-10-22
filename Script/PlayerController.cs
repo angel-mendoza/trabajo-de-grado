@@ -57,6 +57,8 @@ public class PlayerController : MonoBehaviour {
         }
 
         anim.SetFloat("Velocidad", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) );
+        
+
         if (GetComponent<Rigidbody2D>().velocity.x > 0)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);

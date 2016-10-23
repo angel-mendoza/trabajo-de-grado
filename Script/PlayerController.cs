@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour {
 
     public float velocidadDeMovimiento;       //moveSpeed
     public float fuerzaDeSalto;               //jumpHeigth
+    private float friccion;                   //moveVelocity
 
     public Transform checkDelSuelo;           //groundCheck
     public float radioDelCheckDelSuelo;       // groundCheckRadius
@@ -45,16 +46,22 @@ public class PlayerController : MonoBehaviour {
             dobleSalto = true;
         }
 
+        friccion = 0f;
 
         if (Input.GetKey(KeyCode.D))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(velocidadDeMovimiento,GetComponent<Rigidbody2D>().velocity.y);
+            //GetComponent<Rigidbody2D>().velocity = new Vector2(velocidadDeMovimiento,GetComponent<Rigidbody2D>().velocity.y);
+            friccion = velocidadDeMovimiento;
         }
+
 
         if (Input.GetKey(KeyCode.A))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(-velocidadDeMovimiento, GetComponent<Rigidbody2D>().velocity.y);
+            // GetComponent<Rigidbody2D>().velocity = new Vector2(-velocidadDeMovimiento, GetComponent<Rigidbody2D>().velocity.y);
+            friccion = -velocidadDeMovimiento;
         }
+
+        GetComponent<Rigidbody2D>().velocity = new Vector2(friccion, GetComponent<Rigidbody2D>().velocity.y);
 
         anim.SetFloat("Velocidad", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) );
         

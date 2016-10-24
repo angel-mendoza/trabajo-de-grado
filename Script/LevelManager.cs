@@ -15,9 +15,15 @@ public class LevelManager : MonoBehaviour {
 
     private float gravityStore;
 
+    private CameraController camara;
+
+    public HealthManager healthManager;
+
     // Use this for initialization
     void Start() {
         player = FindObjectOfType<PlayerController>();
+        camara = FindObjectOfType<CameraController>();
+        healthManager = FindObjectOfType<HealthManager>();
     }
 
     // Update is called once per frame
@@ -35,16 +41,17 @@ public class LevelManager : MonoBehaviour {
         Instantiate(animacionDeMuerte, player.transform.position, player.transform.rotation);
         player.enabled = false;
         player.GetComponent<Renderer>().enabled = false;
-        gravityStore = player.GetComponent<Rigidbody2D>().gravityScale;
-        player.GetComponent<Rigidbody2D>().gravityScale = 0f;
+        camara.teEstoySiguiendo = false;
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         ScoreManager.AgergarPuntos(-penalidadPorMuerte);
         Debug.Log("Player respawn");
         yield return new WaitForSeconds(respawnDelay);
-        player.GetComponent<Rigidbody2D>().gravityScale = gravityStore;
         player.transform.position = puestoDeControl.transform.position;
         player.enabled = true;
         player.GetComponent<Renderer>().enabled = true;
+        healthManager.FullHelalth();
+        healthManager.estaMuerto = false;
+        camara.teEstoySiguiendo = true;
         Instantiate(animacionDeRevivir, puestoDeControl.transform.position, puestoDeControl.transform.rotation);
     }
 }

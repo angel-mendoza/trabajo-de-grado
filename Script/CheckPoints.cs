@@ -22,7 +22,6 @@ public class CheckPoints : MonoBehaviour {
         if (other.name == "Player")
         {
             levelmanager.puestoDeControl = gameObject;
-            Debug.Log("puesto de control activado");
         }
     }
 }

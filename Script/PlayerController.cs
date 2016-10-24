@@ -14,6 +14,12 @@ public class PlayerController : MonoBehaviour {
     private bool dobleSalto;                  //dobleJumped
     private Animator anim;
 
+    public Transform disparador;
+    public GameObject proyectil;
+
+    public float restrasoDeDisparo;
+    private float contadorRetrasoDeDisparo;
+
 
 	// Use this for initialization
 	void Start () {
@@ -50,14 +56,12 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.D))
         {
-            //GetComponent<Rigidbody2D>().velocity = new Vector2(velocidadDeMovimiento,GetComponent<Rigidbody2D>().velocity.y);
             friccion = velocidadDeMovimiento;
         }
 
 
         if (Input.GetKey(KeyCode.A))
         {
-            // GetComponent<Rigidbody2D>().velocity = new Vector2(-velocidadDeMovimiento, GetComponent<Rigidbody2D>().velocity.y);
             friccion = -velocidadDeMovimiento;
         }
 
@@ -72,6 +76,21 @@ public class PlayerController : MonoBehaviour {
         }else if (GetComponent<Rigidbody2D>().velocity.x < 0)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Instantiate(proyectil, disparador.position, disparador.rotation);
+            contadorRetrasoDeDisparo = restrasoDeDisparo;
+        }
+
+        if (Input.GetKey(KeyCode.M))
+        {
+            contadorRetrasoDeDisparo -= Time.deltaTime;
+            if(contadorRetrasoDeDisparo <= 0)
+            {
+                contadorRetrasoDeDisparo = restrasoDeDisparo;
+            }
         }
     }
 

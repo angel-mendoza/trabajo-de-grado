@@ -77,9 +77,13 @@ public class PlayerController : MonoBehaviour {
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
         }
-
+        if (anim.GetBool("disparo"))
+        {
+            anim.SetBool("disparo", false);
+        }
         if (Input.GetKeyDown(KeyCode.M))
         {
+            anim.SetBool("disparo", true);
             Instantiate(proyectil, disparador.position, disparador.rotation);
             contadorRetrasoDeDisparo = restrasoDeDisparo;
         }

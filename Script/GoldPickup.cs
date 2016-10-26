@@ -23,7 +23,6 @@ public class GoldPickup : MonoBehaviour {
         }
 
         GoldManager.AgergarOro(oroParaAgregar);
-        //ScoreManager.AgergarPuntos(puntosParaAgregados);
-        //Destroy(gameObject);
+
     }
 }

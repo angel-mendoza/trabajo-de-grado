@@ -48,22 +48,24 @@ public class PlayerController : MonoBehaviour {
 
         anim.SetBool("Suelo", conectadoASuelo);
 	
-        if (Input.GetKeyDown(KeyCode.Space) && conectadoASuelo)
+        if (Input.GetButtonDown("Jump") && conectadoASuelo)
         {
             Salto();
             saltoSonido.Play();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !dobleSalto && !conectadoASuelo)
+        if (Input.GetButtonDown("Jump") && !dobleSalto && !conectadoASuelo)
         {
             Salto();
             saltoSonido.Play();
             dobleSalto = true;
         }
 
-        friccion = 0f;
+        friccion = velocidadDeMovimiento * Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetKey(KeyCode.D))
+        //friccion = 0f;
+
+/*        if (Input.GetKey(KeyCode.D))
         {
             friccion = velocidadDeMovimiento;
         }
@@ -73,6 +75,8 @@ public class PlayerController : MonoBehaviour {
         {
             friccion = -velocidadDeMovimiento;
         }
+*/
+        
         if(derriboContador <= 0)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(friccion, GetComponent<Rigidbody2D>().velocity.y);
@@ -107,14 +111,14 @@ public class PlayerController : MonoBehaviour {
         {
             anim.SetBool("disparo", false);
         }
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetButtonDown("Fire1"))
         {
             anim.SetBool("disparo", true);
             Instantiate(proyectil, disparador.position, disparador.rotation);
             contadorRetrasoDeDisparo = restrasoDeDisparo;
         }
 
-        if (Input.GetKey(KeyCode.M))
+        if (Input.GetButtonDown("Fire1"))
         {
             contadorRetrasoDeDisparo -= Time.deltaTime;
             if(contadorRetrasoDeDisparo <= 0)

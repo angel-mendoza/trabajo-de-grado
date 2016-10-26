@@ -5,6 +5,8 @@ public class CointPickup : MonoBehaviour {
 
     public int puntosParaAgregados;
 
+    public AudioSource monedaSonido;
+
     // Use this for initialization
     void Start() {
 
@@ -23,6 +25,7 @@ public class CointPickup : MonoBehaviour {
         }
 
         ScoreManager.AgergarPuntos(puntosParaAgregados);
+        monedaSonido.Play();
         Destroy(gameObject);
     }
 }

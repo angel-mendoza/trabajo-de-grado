@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: b9efd0f901f66e7479468635ad1232bf
-timeCreated: 1477255079
+timeCreated: 1477438209
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: moneda
+    21300002: caja-recompensa
+    21300004: caja-recompensa-vacia
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -49,7 +51,12 @@ TextureImporter:
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -3
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -61,6 +68,32 @@ TextureImporter:
         y: 659
         width: 36
         height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: caja-recompensa
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 502
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: caja-recompensa-vacia
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 431
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

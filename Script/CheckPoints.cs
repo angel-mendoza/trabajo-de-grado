@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CheckPoints : MonoBehaviour {
 
-
+    
     public LevelManager levelmanager;
 
     // Use this for initialization
@@ -21,6 +21,8 @@ public class CheckPoints : MonoBehaviour {
     {
         if (other.name == "Player")
         {
+            GetComponent<AudioSource>().Play();
+            GetComponent<Animator>().SetBool("activa", true);
             levelmanager.puestoDeControl = gameObject;
         }
     }

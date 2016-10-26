@@ -20,9 +20,16 @@ public class PlayerController : MonoBehaviour {
     public float restrasoDeDisparo;
     private float contadorRetrasoDeDisparo;
 
+    public AudioSource saltoSonido;
 
-	// Use this for initialization
-	void Start () {
+    public float derribo;                   //knockback
+    public float longitudDeDerribo;         //knockBackLength
+    public float derriboContador;           //knockBackCount
+    public bool derriboDerecha;             //knockBackRigth
+
+
+    // Use this for initialization
+    void Start () {
         anim = GetComponent<Animator>();
 	}
 
@@ -44,11 +51,13 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) && conectadoASuelo)
         {
             Salto();
+            saltoSonido.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && !dobleSalto && !conectadoASuelo)
         {
             Salto();
+            saltoSonido.Play();
             dobleSalto = true;
         }
 
@@ -64,8 +73,25 @@ public class PlayerController : MonoBehaviour {
         {
             friccion = -velocidadDeMovimiento;
         }
+        if(derriboContador <= 0)
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(friccion, GetComponent<Rigidbody2D>().velocity.y);
+        }
+        else
+        {
+            if (derriboDerecha)
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(-derribo, derribo);
+            }
 
-        GetComponent<Rigidbody2D>().velocity = new Vector2(friccion, GetComponent<Rigidbody2D>().velocity.y);
+            if (!derriboDerecha)
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(derribo, derribo);
+            }
+
+            derriboContador -= Time.deltaTime;
+        }
+        
 
         anim.SetFloat("Velocidad", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) );
         

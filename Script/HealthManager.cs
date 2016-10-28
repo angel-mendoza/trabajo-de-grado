@@ -14,12 +14,16 @@ public class HealthManager : MonoBehaviour {
 
     Text text;
 
+    private LifeManager sistemaDeVida;
+
     // Use this for initialization
     void Start () {
         text = GetComponent<Text>();
         levelmanager = FindObjectOfType<LevelManager>();
         dañoDelPalyer = dañoPlayerMax;
         estaMuerto = false;
+
+        sistemaDeVida = FindObjectOfType<LifeManager>();
     }
 	
 	// Update is called once per frame
@@ -29,6 +33,7 @@ public class HealthManager : MonoBehaviour {
             dañoDelPalyer = 0;
             levelmanager.RespawnPlayer();
             estaMuerto = true;
+            sistemaDeVida.TakeLife();
         }
 
         text.text = "" + dañoDelPalyer;

@@ -27,11 +27,18 @@ public class PlayerController : MonoBehaviour {
     public float derriboContador;           //knockBackCount
     public bool derriboDerecha;             //knockBackRigth
 
+    public bool enLasEscaleras;             //onLadder
+    public float rapidesDeEscalar;          //climbSpeed
+    private float velocidadDeEscalar;       //climbVelocity
+    private float gravedad;                 //gravityStore
+
+
 
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
-	}
+        gravedad = GetComponent<Rigidbody2D>().gravityScale;
+    }
 
     void FixedUpdate()
     {
@@ -126,10 +133,37 @@ public class PlayerController : MonoBehaviour {
                 contadorRetrasoDeDisparo = restrasoDeDisparo;
             }
         }
+
+        if (enLasEscaleras)
+        {
+            GetComponent<Rigidbody2D>().gravityScale = 0f;
+            velocidadDeEscalar = rapidesDeEscalar * Input.GetAxisRaw("Vertical");
+            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, velocidadDeEscalar);
+        }
+        if (!enLasEscaleras)
+        {
+            GetComponent<Rigidbody2D>().gravityScale = gravedad;
+        }
     }
 
     public void Salto()
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, fuerzaDeSalto);
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "plataforma")
+        {
+            transform.parent = other.transform;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "plataforma")
+        {
+            transform.parent = null;
+        }
     }
 }

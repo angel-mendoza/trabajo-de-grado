@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class LifeManager : MonoBehaviour {
 
-    public int vidasIniciales;
     private int contadorDeVidas;
     private Text thetext;
     public GameObject ventanaDeGameOver;
@@ -17,7 +16,7 @@ public class LifeManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         thetext = GetComponent<Text>();
-        contadorDeVidas = vidasIniciales;
+        contadorDeVidas = PlayerPrefs.GetInt("Vidas");
         player = FindObjectOfType<PlayerController>();
 	}
 	
@@ -45,11 +44,13 @@ public class LifeManager : MonoBehaviour {
     public void GiveLife()
     {
         contadorDeVidas++;
+        PlayerPrefs.SetInt("Vidas", contadorDeVidas);
     }
 
     public void TakeLife()
     {
         contadorDeVidas--;
+        PlayerPrefs.SetInt("Vidas", contadorDeVidas);
     }
 
 }

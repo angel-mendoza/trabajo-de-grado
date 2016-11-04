@@ -18,7 +18,7 @@ public class ScoreManager : MonoBehaviour
     {
         if ( puntuacion < 0)
         {
-            puntuacion = 0;
+            puntuacion = PlayerPrefs.GetInt("Puntuacion");
         }
 
         text.text = "" + puntuacion;
@@ -27,10 +27,12 @@ public class ScoreManager : MonoBehaviour
     public static void AgergarPuntos( int puntosAgregados)
     {
         puntuacion += puntosAgregados;
+        PlayerPrefs.SetInt("Puntuacion", puntuacion);
     }
 
     public static void Reset()
     {
         puntuacion = 0;
+        PlayerPrefs.SetInt("Puntuacion", puntuacion);
     }
 }

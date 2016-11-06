@@ -32,12 +32,20 @@ public class PlayerController : MonoBehaviour {
     private float velocidadDeEscalar;       //climbVelocity
     private float gravedad;                 //gravityStore
 
+    public Transform disparadorDelCombo;
+    public GameObject combo;
+    public GameObject aura_kii;
+    public EnergyBarController barraDeEnergia;
+    public ComboAtackController comboController;
+
 
 
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
         gravedad = GetComponent<Rigidbody2D>().gravityScale;
+        barraDeEnergia = FindObjectOfType<EnergyBarController>();
+        comboController = FindObjectOfType<ComboAtackController>();
     }
 
     void FixedUpdate()
@@ -70,19 +78,6 @@ public class PlayerController : MonoBehaviour {
 
         friccion = velocidadDeMovimiento * Input.GetAxisRaw("Horizontal");
 
-        //friccion = 0f;
-
-/*        if (Input.GetKey(KeyCode.D))
-        {
-            friccion = velocidadDeMovimiento;
-        }
-
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            friccion = -velocidadDeMovimiento;
-        }
-*/
         
         if(derriboContador <= 0)
         {
@@ -131,6 +126,18 @@ public class PlayerController : MonoBehaviour {
             if(contadorRetrasoDeDisparo <= 0)
             {
                 contadorRetrasoDeDisparo = restrasoDeDisparo;
+            }
+        }
+
+        if (barraDeEnergia.dispararCombo == true)
+        {
+            aura_kii.SetActive(true);
+            if (Input.GetButtonDown("Fire2"))
+            {
+                Instantiate(combo, disparadorDelCombo.position, disparadorDelCombo.rotation);
+                barraDeEnergia.tiempo = 0;
+                barraDeEnergia.dispararCombo = false;
+                aura_kii.SetActive(false);
             }
         }
 

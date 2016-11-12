@@ -4,7 +4,7 @@ using System.Collections;
 public class ProyectilController : MonoBehaviour {
 
     public float velocidad;
-
+    public GameObject efectoDeRomperCadena;
     public PeldanoController cadena;
     public PlayerController player;
     public BloqueController bloque;
@@ -37,6 +37,7 @@ public class ProyectilController : MonoBehaviour {
 
         if (other.tag == "cadena")
         {
+            Instantiate(efectoDeRomperCadena, transform.position, transform.rotation);
             cadena.destruirUnion();
             other.GetComponent<CadenaController>().destruirCadena();
         }

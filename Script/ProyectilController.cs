@@ -5,13 +5,17 @@ public class ProyectilController : MonoBehaviour {
 
     public float velocidad;
 
+    public PeldanoController cadena;
     public PlayerController player;
+    public BloqueController bloque;
 
     public int daño;
 
 	// Use this for initialization
 	void Start () {
         player = FindObjectOfType<PlayerController>();
+        cadena = FindObjectOfType<PeldanoController>();
+        bloque = FindObjectOfType<BloqueController>();
 
         if (player.transform.localScale.x < 0)
         {
@@ -30,7 +34,13 @@ public class ProyectilController : MonoBehaviour {
         {
             other.GetComponent<EnemyHealthManager>().dañoQueDara(daño);
         }
-        
+
+        if (other.tag == "cadena")
+        {
+            cadena.destruirUnion();
+            other.GetComponent<CadenaController>().destruirCadena();
+        }
+
         Destroy(gameObject);
     }
 }

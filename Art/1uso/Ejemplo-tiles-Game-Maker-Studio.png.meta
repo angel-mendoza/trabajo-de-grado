@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b9efd0f901f66e7479468635ad1232bf
-timeCreated: 1478215738
+timeCreated: 1478907250
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,9 @@ TextureImporter:
     21300006: plataforma-izquierda
     21300008: plataforma-derecha
     21300010: plataforma-medio
+    21300012: bloque
+    21300014: cadena
+    21300016: "pelda\xF1o"
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -136,6 +139,45 @@ TextureImporter:
         y: 502
         width: 70
         height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bloque
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 360
+        width: 66
+        height: 69
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cadena
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 716
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "pelda\xF1o"
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 502
+        width: 70
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

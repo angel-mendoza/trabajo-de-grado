@@ -1,12 +1,14 @@
 fileFormatVersion: 2
 guid: 8a227ab751d8e8647aed093b5c388f1d
-timeCreated: 1478212563
+timeCreated: 1479013600
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Estaca
     21300002: puerta
     21300004: escalera
+    21300006: trampolin
+    21300008: trampolin2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -89,6 +91,32 @@ TextureImporter:
         y: 1408
         width: 127
         height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: trampolin
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 257
+        width: 128
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: trampolin2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 66
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

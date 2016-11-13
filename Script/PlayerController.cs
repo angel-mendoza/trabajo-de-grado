@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
     public float velocidadDeMovimiento;       //moveSpeed
     public float fuerzaDeSalto;               //jumpHeigth
     private float friccion;                   //moveVelocity
+    public float trampolin;
 
     public Transform checkDelSuelo;           //groundCheck
     public float radioDelCheckDelSuelo;       // groundCheckRadius
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour {
         gravedad = GetComponent<Rigidbody2D>().gravityScale;
         barraDeEnergia = FindObjectOfType<EnergyBarController>();
         comboController = FindObjectOfType<ComboAtackController>();
+        trampolin = fuerzaDeSalto * 2;
     }
 
     void FixedUpdate()
@@ -158,11 +160,21 @@ public class PlayerController : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, fuerzaDeSalto);
     }
 
+    public void SaltoFuerte()
+    {
+        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, trampolin);
+    }
+
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "plataforma")
         {
             transform.parent = other.transform;
+        }
+
+        if (other.gameObject.tag == "trampolin")
+        {
+            SaltoFuerte();
         }
     }
 
@@ -172,5 +184,6 @@ public class PlayerController : MonoBehaviour {
         {
             transform.parent = null;
         }
+
     }
 }

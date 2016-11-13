@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour {
         player = FindObjectOfType<PlayerController>();
         camara = FindObjectOfType<CameraController>();
         healthManager = FindObjectOfType<HealthManager>();
+        
     }
 
     // Update is called once per frame
@@ -44,11 +45,12 @@ public class LevelManager : MonoBehaviour {
         camara.teEstoySiguiendo = false;
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         ScoreManager.AgergarPuntos(-penalidadPorMuerte);
-        Debug.Log("Player respawn");
+        //Debug.Log("Player respawn");
         yield return new WaitForSeconds(respawnDelay);
         player.transform.position = puestoDeControl.transform.position;
         player.enabled = true;
         player.GetComponent<Renderer>().enabled = true;
+        
         healthManager.FullHelalth();
         healthManager.estaMuerto = false;
         camara.teEstoySiguiendo = true;

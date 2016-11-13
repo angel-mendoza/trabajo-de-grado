@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b9efd0f901f66e7479468635ad1232bf
-timeCreated: 1478950842
+timeCreated: 1478998212
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,6 +14,7 @@ TextureImporter:
     21300014: cadena
     21300016: "pelda\xF1o"
     21300018: aspa
+    21300020: estava
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -194,6 +195,19 @@ TextureImporter:
         height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: estava
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 431
+        width: 21
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

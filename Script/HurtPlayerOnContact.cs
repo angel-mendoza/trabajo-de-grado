@@ -33,5 +33,6 @@ public class HurtPlayerOnContact : MonoBehaviour {
                 player.derriboDerecha = false;
             }
         }
+
     }
 }

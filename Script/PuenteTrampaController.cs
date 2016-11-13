@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class PuenteTrampaController : MonoBehaviour {
-    public Transform disparador;
-    public GameObject piso;
+
     // Use this for initialization
     void Start () {
 	
@@ -21,8 +20,4 @@ public class PuenteTrampaController : MonoBehaviour {
         }
     }
 
-    public void Restaurar()
-    {
-        Instantiate(piso, disparador.position, disparador.rotation);
-    }
 }

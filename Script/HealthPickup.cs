@@ -10,9 +10,6 @@ public class HealthPickup : MonoBehaviour {
     {
         if (other.GetComponent<PlayerController>() == null)
             return;
-        
-               
-        
             HealthManager.HurtPlayer(-vida);
             sonido.Play();
             Destroy(gameObject);

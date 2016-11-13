@@ -42,6 +42,11 @@ public class ProyectilController : MonoBehaviour {
             other.GetComponent<CadenaController>().destruirCadena();
         }
 
+        if(other.tag == "cajaCobertura")
+        {
+            other.GetComponent<CoberturaCaja>().Eliminar();
+        }
+
         Destroy(gameObject);
     }
 }

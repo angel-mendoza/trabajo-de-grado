@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b9efd0f901f66e7479468635ad1232bf
-timeCreated: 1478998212
+timeCreated: 1479068518
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,6 +15,10 @@ TextureImporter:
     21300016: "pelda\xF1o"
     21300018: aspa
     21300020: estava
+    21300022: Ejemplo-tiles-Game-Maker-Studio_0
+    21300024: Ejemplo-tiles-Game-Maker-Studio_1
+    21300026: Ejemplo-tiles-Game-Maker-Studio_2
+    21300028: Ejemplo-tiles-Game-Maker-Studio_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -208,6 +212,58 @@ TextureImporter:
         height: 35
       alignment: 7
       pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ejemplo-tiles-Game-Maker-Studio_0
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 573
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ejemplo-tiles-Game-Maker-Studio_1
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 431
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ejemplo-tiles-Game-Maker-Studio_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 360
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ejemplo-tiles-Game-Maker-Studio_3
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 573
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

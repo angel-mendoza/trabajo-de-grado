@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PauseMenu : MonoBehaviour {
-
+    
     public bool enPause;
     public GameObject pantallaDePausa;
 
@@ -12,10 +12,12 @@ public class PauseMenu : MonoBehaviour {
 
         if (enPause)
         {
+           
             pantallaDePausa.SetActive(true);
             Time.timeScale = 0f;
         }else
         {
+           
             pantallaDePausa.SetActive(false);
             Time.timeScale = 1f;
         }
@@ -23,6 +25,7 @@ public class PauseMenu : MonoBehaviour {
 
 	if (Input.GetKeyDown(KeyCode.Return))
         {
+            GetComponent<AudioSource>().Play();
             enPause = !enPause;
         }
 	}

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b9efd0f901f66e7479468635ad1232bf
-timeCreated: 1479326987
+timeCreated: 1479337218
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -22,6 +22,7 @@ TextureImporter:
     21300030: puente
     21300032: btn1
     21300034: btn2
+    21300036: cubo-giratorio
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -306,6 +307,19 @@ TextureImporter:
         height: 26
       alignment: 7
       pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cubo-giratorio
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 502
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

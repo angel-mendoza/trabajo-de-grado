@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8a227ab751d8e8647aed093b5c388f1d
-timeCreated: 1479013600
+timeCreated: 1479335408
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,8 @@ TextureImporter:
     21300004: escalera
     21300006: trampolin
     21300008: trampolin2
+    21300010: palanca1
+    21300012: palanca2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -119,6 +121,32 @@ TextureImporter:
         height: 66
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palanca1
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 128
+        width: 114
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: palanca2
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 256
+        width: 118
+        height: 92
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

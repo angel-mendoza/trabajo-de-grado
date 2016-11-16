@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     private float contadorRetrasoDeDisparo;
 
     public AudioSource saltoSonido;
+    public AudioSource sonidoCombo;
 
     public float derribo;                   //knockback
     public float longitudDeDerribo;         //knockBackLength
@@ -137,6 +138,7 @@ public class PlayerController : MonoBehaviour {
             if (Input.GetButtonDown("Fire2"))
             {
                 Instantiate(combo, disparadorDelCombo.position, disparadorDelCombo.rotation);
+                sonidoCombo.Play();
                 barraDeEnergia.tiempo = 0;
                 barraDeEnergia.dispararCombo = false;
                 aura_kii.SetActive(false);

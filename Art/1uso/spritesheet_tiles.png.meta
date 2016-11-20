@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8a227ab751d8e8647aed093b5c388f1d
-timeCreated: 1479335408
+timeCreated: 1479528946
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -11,6 +11,7 @@ TextureImporter:
     21300008: trampolin2
     21300010: palanca1
     21300012: palanca2
+    21300014: block
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -147,6 +148,19 @@ TextureImporter:
         height: 92
       alignment: 7
       pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: block
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

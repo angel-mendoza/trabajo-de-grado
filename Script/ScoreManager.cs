@@ -12,27 +12,31 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         text = GetComponent<Text>();
+        Reset();
     }
 
     void Update()
     {
         if ( puntuacion < 0)
         {
-            puntuacion = PlayerPrefs.GetInt("Puntuacion");
+            //puntuacion = PlayerPrefs.GetInt("Puntuacion");
+            puntuacion = 0;
         }
 
         text.text = "" + puntuacion;
+       
+
     }
 
     public static void AgergarPuntos( int puntosAgregados)
     {
         puntuacion += puntosAgregados;
-        PlayerPrefs.SetInt("Puntuacion", puntuacion);
+        //PlayerPrefs.SetInt("Puntuacion", puntuacion);
     }
 
     public static void Reset()
     {
         puntuacion = 0;
-        PlayerPrefs.SetInt("Puntuacion", puntuacion);
+       // PlayerPrefs.SetInt("Puntuacion", puntuacion);
     }
 }

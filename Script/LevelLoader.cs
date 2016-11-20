@@ -6,9 +6,11 @@ public class LevelLoader : MonoBehaviour {
 
     public bool enLaZona;
     public string siguienteNivel;
-
-	// Use this for initialization
-	void Start () {
+    //public string levelTag;
+    public string puntos;
+    public int clave;
+    // Use this for initialization
+    void Start () {
         enLaZona = false;
 	}
 	
@@ -16,6 +18,8 @@ public class LevelLoader : MonoBehaviour {
 	void Update () {
 	    if (Input.GetAxisRaw("Vertical") > 0 && enLaZona)
         {
+            PlayerPrefs.SetInt("llave", clave);
+            PlayerPrefs.SetInt("Puntuacion", ScoreManager.puntuacion);
             SceneManager.LoadScene(siguienteNivel);
         }
 	}

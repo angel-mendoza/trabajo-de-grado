@@ -173,11 +173,12 @@ public class PlayerController : MonoBehaviour {
         {
             transform.parent = other.transform;
         }
-
+        
         if (other.gameObject.tag == "trampolin")
         {
             SaltoFuerte();
         }
+        
     }
 
     void OnCollisionExit2D(Collision2D other)
@@ -185,6 +186,11 @@ public class PlayerController : MonoBehaviour {
         if (other.gameObject.tag == "plataforma")
         {
             transform.parent = null;
+        }
+
+        if (other.gameObject.tag == "trampolin")
+        {
+            SaltoFuerte();
         }
 
     }

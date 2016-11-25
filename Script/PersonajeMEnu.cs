@@ -8,31 +8,26 @@ public class PersonajeMEnu : MonoBehaviour {
     public string sucre;
     public string zamora;
     public GameObject preloader;
-    public AudioSource btn;
 
     //----------------------------------------
 
     public void Bolivar()
     {
-        btn.Play();
         StartCoroutine("cargandoBolivar");
     }
 
     public void Sucre()
     {
-        btn.Play();
         StartCoroutine("cargandoSucre");
     }
 
     public void Miranda()
     {
-        btn.Play();
         StartCoroutine("cargandoMiranda");
     }
 
     public void Zamora()
     {
-        btn.Play();
         StartCoroutine("cargandoZamora");
     }
 

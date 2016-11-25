@@ -7,6 +7,7 @@ public class TimeMAnager : MonoBehaviour {
     public float startingTime;
     public float tiempoDePartida;
     private Text theText;
+    public float tiempoScore;
     private PauseMenu pause;
     public int dañoPorPerderTiempo;
 
@@ -34,12 +35,20 @@ public class TimeMAnager : MonoBehaviour {
             HealthManager.HurtPlayer(dañoPorPerderTiempo);
             RestaurarTiempo();
         }
-       
+
+
+        tiempoScore = calcularScore(startingTime, tiempoDePartida);
 	
 	}
 
     public void RestaurarTiempo()
     {
         startingTime = tiempoDePartida;
+    }
+    float calcularScore(float startingTime, float tiempoDePartida)
+    {
+        float respuesta;
+        respuesta = tiempoDePartida - startingTime;
+        return respuesta;
     }
 }

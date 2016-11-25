@@ -6,21 +6,37 @@ public class LevelLoader : MonoBehaviour {
 
     public bool enLaZona;
     public string siguienteNivel;
-    //public string levelTag;
-    public string puntos;
-    public int clave;
+    public int levelTag;
+    public int nivel;
+
+    public TimeMAnager tiempo;
+    public int puntos;
+    private int tiempoScore;
+    private int puntosScore;
+
+
+
     // Use this for initialization
     void Start () {
         enLaZona = false;
+        tiempo = FindObjectOfType<TimeMAnager>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	    if (Input.GetAxisRaw("Vertical") > 0 && enLaZona)
         {
-            PlayerPrefs.SetInt("llave", clave);
-            PlayerPrefs.SetInt("Puntuacion", ScoreManager.puntuacion);
+            tiempoScore = (int)tiempo.startingTime;
+            puntosScore = ScoreManager.puntuacion;
+            puntos = tiempoScore + puntosScore;
+            PlayerPrefs.SetInt("Level" + levelTag, 1);
+            PlayerPrefs.SetInt("Puntuacion" + nivel, puntos);
             SceneManager.LoadScene(siguienteNivel);
+
+
+
+            //-----------------------------------------------
+           //PlayerPrefs.SetInt("Level2", 1);
         }
 	}
 

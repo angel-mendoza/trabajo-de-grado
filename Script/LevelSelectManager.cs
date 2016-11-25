@@ -7,54 +7,68 @@ public class LevelSelectManager : MonoBehaviour {
 
 
     public Button[] mundos;
+    public GameObject[] candados;
+    //public string[] levelTags;
+    //public bool[] nivelesDesbloqueados;
+    public bool nivel1;
+    public bool nivel2;
+    public bool nivel3;
+
     public string tutorial;
     public string n1;
     public string n2;
     public string n3;
-    public GameObject candado1;
-    public GameObject candado2;
-    public GameObject candado3;
-    public Button nivel1;
-    public Button nivel2;
-    public Button nivel3;
 
 
     // Use this for initialization
-    void Start () {
-        
+    void Awake () {
         //PlayerPrefs.DeleteAll();
-        for (int i= 0; i<mundos.Length; i++)
+        //candados[0].SetActive(false);
+        //mundos[0].interactable = true;
+        /*
+
+        */
+
+        for (int i = 0; i < mundos.Length; i++)
         {
             mundos[i].interactable = false;
         }
 
-	}
-    //mundos[i].interactable = true; si es true esta activo
-    // Update is called once per frame
+        if (PlayerPrefs.GetInt("levelTag")== 1)
+        {
+            nivel1 = true;
+        }else if (PlayerPrefs.GetInt("levelTag") == 2)
+        {
+
+            nivel2 = true;
+        }else if(PlayerPrefs.GetInt("levelTag") == 3)
+        {
+            nivel3 = true;
+        }
+
+
+            if (nivel1)
+            {
+                candados[0].SetActive(false);
+                mundos[0].interactable = true;
+            }
+            if (nivel2)
+            {
+                candados[1].SetActive(false);
+                mundos[1].interactable = true;
+            }
+            if (nivel3)
+            {
+                candados[2].SetActive(false);
+                mundos[2].interactable = true;
+            }
+
+    }
+
     void Update () {
-	if (PlayerPrefs.GetInt("llave")== 1)
-        {
-            candado1.SetActive(false);
-            nivel1.interactable = true;
-        }
 
-        if (PlayerPrefs.GetInt("llave") == 2)
-        {
-            nivel1.interactable = true;
-            nivel2.interactable = true;
-            candado1.SetActive(false);
-            candado2.SetActive(false);
-        }
 
-        if (PlayerPrefs.GetInt("llave") == 3)
-        {
-            nivel1.interactable = true;
-            nivel2.interactable = true;
-            nivel3.interactable = true;
-            candado1.SetActive(false);
-            candado2.SetActive(false);
-            candado3.SetActive(false);
-        }
+
     }
 
     public void GoToLeveltutorial()

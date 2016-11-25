@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class TitleMenu : MonoBehaviour {
 
     public string nivel;
-    public int vidaDelJugador;
+
     public GameObject preloader;
     public AudioSource btn;
 
@@ -14,10 +14,6 @@ public class TitleMenu : MonoBehaviour {
     {
         btn.Play();
         StartCoroutine("cargando");
-        PlayerPrefs.SetInt("Vidas", vidaDelJugador);
-        PlayerPrefs.SetInt("Puntuacion", 0);
-        //PlayerPrefs.SetInt("level1Tag", 1);
-       
     }
 
     public void Quit()

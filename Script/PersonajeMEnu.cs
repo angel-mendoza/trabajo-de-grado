@@ -8,6 +8,8 @@ public class PersonajeMEnu : MonoBehaviour {
     public string miranda;
     public string sucre;
     public string zamora;
+    public string atras;
+    public string tutorial;
     public GameObject preloader;
 
     //----------------------------------------
@@ -39,6 +41,16 @@ public class PersonajeMEnu : MonoBehaviour {
         PlayerPrefs.SetInt("Vidas", vidaDelJugador);
         PlayerPrefs.SetInt("Puntuacion", 0);
     }
+    public void Atras()
+    {
+        StartCoroutine("cargandoAtras");
+    }
+    public void Tutorial()
+    {
+        StartCoroutine("cargandoTuto");
+        PlayerPrefs.SetInt("Vidas", vidaDelJugador);
+        PlayerPrefs.SetInt("Puntuacion", 0);
+    }
 
     public IEnumerator cargandoBolivar()
     {
@@ -65,5 +77,19 @@ public class PersonajeMEnu : MonoBehaviour {
         preloader.SetActive(true);
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(zamora);
+    }
+
+    public IEnumerator cargandoAtras()
+    {
+        preloader.SetActive(true);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(atras);
+    }
+
+    public IEnumerator cargandoTuto()
+    {
+        preloader.SetActive(true);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(tutorial);
     }
 }

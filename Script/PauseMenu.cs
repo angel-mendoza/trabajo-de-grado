@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour {
     public GameObject pantallaDePausa;
     public GameObject preloader;
     public AudioSource btn;
+    public GameObject mision;
     public string nivel;
     public string personaje;
     public string salir;
@@ -39,6 +40,12 @@ public class PauseMenu : MonoBehaviour {
     public void Resumen()
     {
         enPause = false;
+    }
+
+    public void Mision()
+    {
+        enPause = false;
+        mision.SetActive(true);
     }
 
     public void elegirNivel()

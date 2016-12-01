@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour {
     public PlayerController player;
 
     public bool teEstoySiguiendo;
+    public bool moverCamara;
 
     public float ultimaX;
     public float ultimaY;
@@ -20,8 +21,25 @@ public class CameraController : MonoBehaviour {
 	void Update () {
 	    if (teEstoySiguiendo)
         {
-            //transform.position = new Vector3(player.transform.position.x + ultimaX, player.transform.position.y + ultimaY, transform.position.z);
-            transform.position = new Vector3(player.transform.position.x + ultimaX, ultimaY , transform.position.z);
+            if (moverCamara)
+            {
+                CamaraMovimiento();
+            }
+            else
+            {
+                CamaraFija();
+            }
+           
         }
 	}
+
+    void CamaraFija()
+    {
+        transform.position = new Vector3(player.transform.position.x + ultimaX, ultimaY, transform.position.z);
+    }
+
+    void CamaraMovimiento()
+    {
+        transform.position = new Vector3(player.transform.position.x + ultimaX, player.transform.position.y + ultimaY, transform.position.z);
+    }
 }

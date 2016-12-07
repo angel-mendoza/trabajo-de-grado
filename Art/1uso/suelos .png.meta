@@ -1,11 +1,13 @@
 fileFormatVersion: 2
 guid: d124f8c9335d4ba44b835afe37121f23
-timeCreated: 1477284036
+timeCreated: 1480953010
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: suelos _a_1
     21300002: suelos _a_2
+    21300004: "espa\xF1a"
+    21300006: "espa\xF1a1"
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -80,6 +82,32 @@ TextureImporter:
         y: 1459
         width: 416
         height: 420
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "espa\xF1a"
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1458
+        width: 422
+        height: 421
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "espa\xF1a1"
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1458
+        width: 421
+        height: 421
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

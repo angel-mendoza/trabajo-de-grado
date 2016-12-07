@@ -7,11 +7,14 @@ public class BalaCanonController : MonoBehaviour {
     public float fuerzaY;
     public GameObject efecto;
     public float velocidad;
+    public PlayerController player;
     // Use this for initialization
     void Start()
     {
+        player = FindObjectOfType<PlayerController>();
         GetComponent<Rigidbody2D>().AddRelativeForce(transform.right * fuerzaX, ForceMode2D.Impulse);
         GetComponent<Rigidbody2D>().AddRelativeForce(transform.up * fuerzaY, ForceMode2D.Impulse);
+       
     }
 
     // Update is called once per frame

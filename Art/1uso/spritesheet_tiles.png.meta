@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8a227ab751d8e8647aed093b5c388f1d
-timeCreated: 1480468181
+timeCreated: 1481145229
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -13,6 +13,7 @@ TextureImporter:
     21300012: palanca2
     21300014: block
     21300016: salir
+    21300018: flecha
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -173,6 +174,19 @@ TextureImporter:
         y: 1664
         width: 109
         height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flecha
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1794
+        width: 109
+        height: 125
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

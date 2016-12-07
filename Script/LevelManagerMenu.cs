@@ -56,11 +56,11 @@ public class LevelManagerMenu : MonoBehaviour {
             {
                 button.start1.SetActive(true);
             }
-            if (PlayerPrefs.GetInt("Puntuacion" + button.LevelText.text) > 1000)
+            if (PlayerPrefs.GetInt("Puntuacion" + button.LevelText.text) > 2000)
             {
                 button.start2.SetActive(true);
             }
-            if (PlayerPrefs.GetInt("Puntuacion" + button.LevelText.text) > 1500)
+            if (PlayerPrefs.GetInt("Puntuacion" + button.LevelText.text) > 3000)
             {
                 button.start3.SetActive(true);
             }

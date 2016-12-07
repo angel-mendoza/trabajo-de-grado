@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b9efd0f901f66e7479468635ad1232bf
-timeCreated: 1480552069
+timeCreated: 1481145139
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -24,6 +24,15 @@ TextureImporter:
     21300034: btn2
     21300036: cubo-giratorio
     21300038: bloq
+    21300040: otro
+    21300042: piedra
+    21300044: monte
+    21300046: captus
+    21300048: homgo1
+    21300050: hongo2
+    21300052: roto
+    21300054: noroto
+    21300056: arbusto
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -332,6 +341,123 @@ TextureImporter:
         y: 573
         width: 70
         height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: otro
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 786
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: piedra
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 573
+        width: 70
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: monte
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 573
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: captus
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 780
+        width: 38
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: homgo1
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 715
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hongo2
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 642
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: roto
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 786
+        width: 70
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: noroto
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 360
+        width: 70
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: arbusto
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 786
+        width: 70
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

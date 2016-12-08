@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d124f8c9335d4ba44b835afe37121f23
-timeCreated: 1480953010
+timeCreated: 1481172515
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,6 +8,8 @@ TextureImporter:
     21300002: suelos _a_2
     21300004: "espa\xF1a"
     21300006: "espa\xF1a1"
+    21300008: pantano
+    21300010: pantano1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -108,6 +110,32 @@ TextureImporter:
         y: 1458
         width: 421
         height: 421
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pantano
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 999
+        width: 418
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pantano1
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 1008
+        width: 417
+        height: 417
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

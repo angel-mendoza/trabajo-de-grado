@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b9efd0f901f66e7479468635ad1232bf
-timeCreated: 1481145139
+timeCreated: 1481173712
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -33,6 +33,7 @@ TextureImporter:
     21300052: roto
     21300054: noroto
     21300056: arbusto
+    21300058: otro1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -458,6 +459,19 @@ TextureImporter:
         y: 786
         width: 70
         height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: otro1
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 715
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

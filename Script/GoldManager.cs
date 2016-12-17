@@ -11,6 +11,7 @@ public class GoldManager : MonoBehaviour {
 
     void Start()
     {
+        sistemaDeVida = FindObjectOfType<LifeManager>();
         text = GetComponent<Text>();
     }
 

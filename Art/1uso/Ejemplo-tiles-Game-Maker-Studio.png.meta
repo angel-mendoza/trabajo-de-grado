@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b9efd0f901f66e7479468635ad1232bf
-timeCreated: 1481173712
+timeCreated: 1481934569
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -34,6 +34,12 @@ TextureImporter:
     21300054: noroto
     21300056: arbusto
     21300058: otro1
+    21300060: masmorra-pared
+    21300062: plataforma-masmorra-1
+    21300064: plataforma-masmorra-2
+    21300066: plataforma-masmorra-3
+    21300068: mazmorra
+    21300070: Mazmorra1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -470,6 +476,84 @@ TextureImporter:
         serializedVersion: 2
         x: 497
         y: 715
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: masmorra-pared
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 218
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plataforma-masmorra-1
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 177
+        width: 70
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plataforma-masmorra-2
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 106
+        width: 70
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plataforma-masmorra-3
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 35
+        width: 70
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mazmorra
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 147
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Mazmorra1
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 76
         width: 70
         height: 70
       alignment: 0

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b9efd0f901f66e7479468635ad1232bf
-timeCreated: 1481934569
+timeCreated: 1482026705
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -40,6 +40,7 @@ TextureImporter:
     21300066: plataforma-masmorra-3
     21300068: mazmorra
     21300070: Mazmorra1
+    21300072: qlala
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -556,6 +557,19 @@ TextureImporter:
         y: 76
         width: 70
         height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: qlala
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 0
+        width: 48
+        height: 146
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

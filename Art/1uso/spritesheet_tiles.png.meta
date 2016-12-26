@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8a227ab751d8e8647aed093b5c388f1d
-timeCreated: 1482479603
+timeCreated: 1482547946
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -16,6 +16,7 @@ TextureImporter:
     21300018: flecha
     21300020: btn-llave
     21300022: btn-llave-1
+    21300024: Mamorra-ventana
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -217,6 +218,19 @@ TextureImporter:
         height: 48
       alignment: 7
       pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Mamorra-ventana
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 388
+        width: 112
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

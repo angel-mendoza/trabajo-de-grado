@@ -20,9 +20,8 @@ public class LevelManagerMenu : MonoBehaviour {
     public Transform Spacer;
     public List<level> LevelList;
 
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         //DeleteAll();
         FillList(); 
 	}
@@ -51,6 +50,7 @@ public class LevelManagerMenu : MonoBehaviour {
             button.ruta = level.ruta;
 
             button.GetComponent<Button>().onClick.AddListener(() => LoadLevels(button.ruta));
+       
 
             if (PlayerPrefs.GetInt("Puntuacion" + button.LevelText.text)> 0)
             {
